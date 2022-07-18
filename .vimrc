@@ -38,7 +38,7 @@
   filetype indent on
 
 "*##################################################################################################*
-"*##                                      FOLDINGS                                                ##*
+"*##                                      FOLDING                                                ##*
 "*##################################################################################################*
 " Configuration
   set foldmethod=manual 
@@ -71,7 +71,7 @@
   autocmd TabLeave *.tex mkview
   "autocmd TabEnter *.tex silent loadview
 
-" Shorcuts for foldings: za open/close a fold 
+" Shortcuts for folding: za open/close a fold 
 "                        zf create a fold 
 "                        zR open all folds 
 "                        zM close all folds 
@@ -167,6 +167,7 @@ nmap <Leader>s <Plug>(easymotion-s2)
     nnoremap <Leader>f :%s///gc<Left><Left><Left><Left>
   
 "C/C++ compilator
+"C/C++ compiler 
     autocmd FileType c nnoremap <Leader>g :!clear && gcc -Wall % -o
     autocmd FileType c nnoremap <Leader>G :!clear && gcc -Wall % && ./a.out
     autocmd FileType c nnoremap <Leader>x :!clear && ./
@@ -260,7 +261,7 @@ let g:vimtex_quickfix_mode=1
 let g:vimtex_syntax_conceal_disable=1
 
 "let g:vimtex_view_use_temp_files = 1 "abre el visor luego de una compilación
-"exitosa. Deshablita la apertura y actualización automática.
+"exitosa. Deshabilita la apertura y actualización automática.
 
 "let g:vimtex_view_forward_search_on_start "Default=1"
 
