@@ -328,6 +328,7 @@ set t_Co=256
 "autocmd FileType tex  colorscheme gruvbox  
 
 "GRUVBOX REVERSIONADO (va bien con simple, badwolf y term.)
+let g:gruvbox_guisp_fallback = "bg"
 let g:lightline = {}
 let g:lightline.colorscheme = 'gruvbox'
 colorscheme gruvbox
