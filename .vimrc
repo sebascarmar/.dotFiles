@@ -167,9 +167,9 @@ nmap <Leader>s <Plug>(easymotion-s2)
 "Substitute: search and replace
     nnoremap <Leader>f :%s///gc<Left><Left><Left><Left>
   
-"Spell on/off
-    nnoremap <Leader>l :set spell spelllang=es,en_us<CR>
-    nnoremap <Leader><S-l> :set nospell<CR>
+"Toggle spell on and off
+    nnoremap <Leader>l :set spell!<CR>
+    
 "C/C++ compiler 
     autocmd FileType c nnoremap <Leader>g :!clear && gcc -Wall % -o
     autocmd FileType c nnoremap <Leader>G :!clear && gcc -Wall % && ./a.out
