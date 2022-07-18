@@ -127,8 +127,9 @@ nmap <Leader>s <Plug>(easymotion-s2)
   
 "Keymaps for tabs
   "Abre una nueva tab con el archivo que se le pase como argumento.
+    nnoremap <C-t> :tabnew 
+  "Acomoda las tabs en la posición deseada (empieza desde 0)
     nnoremap <Leader>m :tabm -1+
-  "Acomoda las tabs enla posición deseada (empieza desde 0)
     nnoremap <Leader><C-t> :tabm
   "Cierra todas las tabs menos la actual
     nnoremap <F9> :tabo<CR>  
