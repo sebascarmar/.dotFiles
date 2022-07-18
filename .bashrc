@@ -1,3 +1,11 @@
+# Add this lines at the top of .bashrc:
+[[ $- == *i* ]] && source ~/.local/share/blesh/ble.sh --noattach
+
+
+
+
+
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -147,10 +155,10 @@ export cura480=/home/sebastian/Downloads/AppImage/Ultimaker_Cura-4.8.0.AppImage
 # This was added for installing Powerline
 #export TERM=”screen-256color” 
 
-powerline-daemon -q
-POWERLINE_BASH_CONTINUATION=1
-POWERLINE_BASH_SELECT=1
-. /usr/local/lib/python3.8/dist-packages/powerline/bindings/bash/powerline.sh
+#powerline-daemon -q
+#POWERLINE_BASH_CONTINUATION=1
+#POWERLINE_BASH_SELECT=1
+#. /usr/local/lib/python3.8/dist-packages/powerline/bindings/bash/powerline.sh
 
 
 ######################################################################################################
@@ -373,8 +381,19 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 #)
 #[ -n "${selected[0]}" ] && vim "${selected[0]}" "+${selected[1]}"
 
-bind 'set show-all-if-ambiguous on'
-bind 'TAB:menu-complete'
+#bind 'set show-all-if-ambiguous on'
+#bind 'TAB:menu-complete'
 
+######################################################################################################
+####                                AGNOSTER THEME                                                ####
+######################################################################################################
+export THEME=$HOME/.bash/themes/agnoster-bash/agnoster.bash
+if [[ -f $THEME ]]; then
+    export DEFAULT_USER=`whoami`
+    source $THEME
+fi
 
+set +o vi
 
+# Add this line at the end of .bashrc:
+[[ ${BLE_VERSION-} ]] && ble-attach
