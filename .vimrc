@@ -11,7 +11,7 @@
   syntax on
   syntax enable
   "setlocal spell
-  "set spelllang=es,en_us
+  set spelllang=es,en_us
   set number
   set hlsearch
   set splitright 
