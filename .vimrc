@@ -245,6 +245,8 @@ call plug#begin('~/.vim/plugged')
 
   " Git integration
     Plug 'airblade/vim-gitgutter'
+    Plug 'tpope/vim-fugitive'
+
 call plug#end()
 
 
