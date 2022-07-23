@@ -296,9 +296,9 @@ let g:ale_list_window_size = 2
 
 " Set this. Airline will handle the rest.
 let g:airline#extensions#ale#enabled = 1
-"let g:ale_fixers = {'latex': ['alex', 'proselint', 'redpen', 'texlab', 'vale', 'cspell', 'write-good', 'textlint']}
-"let g:ale_linters = {'latex': ['cspell', 'write-good', 'textlint',]}
-"let g:ale_linters = {'latex': ['chktex', 'lacheck']}
+let g:ale_fixers = {'tex': ['alex', 'proselint', 'redpen', 'texlab', 'vale', 'cspell', 'write-good', 'textlint']}
+"let g:ale_linters = {'tex': ['cspell', 'write-good', 'textlint',]}
+"let g:ale_linters = {'tex': ['chktex', 'lacheck']}
 
 nnoremap ]w :ALENextWrap<CR>
 nnoremap [w :ALEPreviousWrap<CR>
