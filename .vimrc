@@ -29,8 +29,8 @@
 "*##                                  INDENT & TAB                                                ##*
 "*##################################################################################################*
   set tabstop=8 
-  set shiftwidth=4 
-  set softtabstop=4
+  set shiftwidth=2
+  set softtabstop=2
   set expandtab
   set autoindent
   set smartindent
@@ -300,6 +300,8 @@ let g:airline#extensions#ale#enabled = 1
 "let g:ale_linters = {'latex': ['cspell', 'write-good', 'textlint',]}
 "let g:ale_linters = {'latex': ['chktex', 'lacheck']}
 
+nnoremap ]w :ALENextWrap<CR>
+nnoremap [w :ALEPreviousWrap<CR>
 
 "*##################################################################################################*/
 "*##                                      ULTISNIP                                                ##*/
