@@ -123,3 +123,52 @@ source $ZSH/oh-my-zsh.sh
 ######################################################################################################
 export MANPAGER="sh -c 'col -bx | bat --theme=TwoDark -l man -p' "
 
+######################################################################################################
+####                               FUZZY FINDER                                                   ####
+######################################################################################################
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+#### This is the configuration for fuzzy finder #### 
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --inline-info --multi
+                        --preview="bat --theme=TwoDark --style=full --color=always {}" 
+                        --preview-window='right:hidden:wrap' 
+                        --bind=f2:toggle-preview,ctrl-d:preview-page-down,ctrl-u:preview-page-up,ctrl-u:preview-down,ctrl-i:preview-up'
+
+
+FD_OPTIONS="--hidden --follow --exclude .git --exclude node_modules"
+export FZF_DEFAULT_COMMAND="git ls-files --cached --others --exclude-standard | fd --type f --type l $FD_OPTIONS"
+export FZF_CTRL_T_COMMAND="fd $FD_OPTIONS"
+export FZF_ALT_C_COMMAND="fd --type d $FD_OPTIONS"
+export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
+
+### This is a key map: CTRL-T = CTRL-p
+  # CTRL-p - Paste the selected file path into the command line
+  bindkey -M emacs '^P' fzf-file-widget
+  bindkey -M vicmd '^P' fzf-file-widget
+  bindkey -M viins '^P' fzf-file-widget
+
+
+#### COLORES ####
+
+#export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+# --color=fg:#cbccc6,bg:#1f2430,hl:#707a8c
+# --color=fg+:#707a8c,bg+:#191e2a,hl+:#ffcc66
+# --color=info:#73d0ff,prompt:#707a8c,pointer:#cbccc6
+# --color=marker:#73d0ff,spinner:#73d0ff,header:#d4bfff'
+
+# export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+#--color fg:#D8DEE9,bg:#2E3440,hl:#A3BE8C,fg+:#D8DEE9,bg+:#434C5E,hl+:#A3BE8C
+#--color pointer:#BF616A,info:#4C566A,spinner:#4C566A,header:#4C566A,prompt:#81A1C1,marker:#EBCB8B
+#'
+
+#export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+#--color=dark
+#--color=fg:-1,bg:-1,hl:#c678dd,fg+:#ffffff,bg+:#4b5263,hl+:#d858fe
+#--color=info:#98c379,prompt:#61afef,pointer:#be5046,marker:#e5c07b,spinner:#61afef,header:#61afef
+#'
+
+#export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+#--color fg:242,bg:233,hl:65,fg+:15,bg+:234,hl+:108
+#--color info:108,prompt:109,spinner:108,pointer:168,marker:168
+#'
