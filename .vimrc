@@ -147,31 +147,30 @@ nmap <Leader>s <Plug>(easymotion-s2)
     nnoremap <Leader>/ :b7<CR>
     nnoremap <Leader>( :b8<CR>
     nnoremap <Leader>) :b9<CR>
+
 "Window resize 
-    nnoremap + <C-w>+
-    nnoremap - <C-w>-
-    nnoremap > <C-w>>
-    nnoremap < <C-w><
+  nnoremap + <C-w>+
+  nnoremap - <C-w>-
+  nnoremap > <C-w>>
+  nnoremap < <C-w><
   
 "Substitute: search and replace
-    nnoremap <Leader>f :%s///gc<Left><Left><Left><Left>
+  nnoremap <Leader>f :%s///gc<Left><Left><Left><Left>
   
 "Toggle spell on and off
-    nnoremap <Leader>l :set spell!<CR>
-    
-"C/C++ compiler 
-    autocmd FileType c nnoremap <Leader>g :!clear && gcc -Wall % -o
-    autocmd FileType c nnoremap <Leader>G :!clear && gcc -Wall % && ./a.out
-    autocmd FileType c nnoremap <Leader>x :!clear && ./
-    autocmd FileType cpp nnoremap <Leader>g :!clear && g++ -Wall % -o
-    autocmd FileType cpp nnoremap <Leader>G :!clear && g++ -Wall % && ./a.out
-    autocmd FileType cpp nnoremap <Leader>x :!clear && ./
-  
+  nnoremap <Leader>l :set spell!<CR>
 
+"C/C++ compiler 
+  autocmd FileType c nnoremap <Leader>g :!clear && gcc -Wall % -o
+  autocmd FileType c nnoremap <Leader>G :!clear && gcc -Wall % && ./a.out
+  autocmd FileType c nnoremap <Leader>x :!clear && ./
+  autocmd FileType cpp nnoremap <Leader>g :!clear && g++ -Wall % -o
+  autocmd FileType cpp nnoremap <Leader>G :!clear && g++ -Wall % && ./a.out
+  autocmd FileType cpp nnoremap <Leader>x :!clear && ./
 
 "Comments for C/C++
-   " nnoremap <Leader>m I//<Esc>
-   " vnoremap <Leader>m I//<Esc>
+  nnoremap <Leader>m I//<Esc>
+  vnoremap <Leader>m I//<Esc>
   
 "    "Suprimir
 "    inoremap <C-k> <Esc>lxi
@@ -179,23 +178,23 @@ nmap <Leader>s <Plug>(easymotion-s2)
 "  "Inicio/Fin
 "    inoremap <C-e> <C-o>0
 "    inoremap <C-r> <C-o>$
-"  "Reload archivo sin cambios
-"    noremap <F4> :e!<CR>:source %<CR>
-"    noremap <F3> :e!<CR>
-  "Desactivar temporalmente el resalto
-    nnoremap <F2> :nohls<CR>
+"Reload archivo sin cambios
+  noremap <F4> :e!<CR>:source %<CR>
+  noremap <F3> :e!<CR>
+"Desactivar temporalmente el resalto
+  nnoremap <F2> :nohls<CR>
 "  "Super enter
 "    nnoremap <Leader><C-n> 4a<CR><Esc>2ki
 "    nnoremap <C-n> I<CR><Esc>
 "    inoremap <C-j> <Esc>d0O<Esc><C-m>Plli
-  "Ignore ZZ
-    nnoremap Z <Nop>
-    nnoremap ZZ <Nop>
-  "Unable arrow keys
-    map <Up> <nop>
-    map <Down> <nop>
-    map <Left> <nop>
-    map <Right> <nop>
+"Ignore ZZ
+  nnoremap Z <Nop>
+  nnoremap ZZ <Nop>
+"  "Unable arrow keys
+"    map <Up> <nop>
+"    map <Down> <nop>
+"    map <Left> <nop>
+"    map <Right> <nop>
 
 "*##################################################################################################*
 "*##                                           PLUGINS                                            ##*
