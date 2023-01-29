@@ -78,7 +78,7 @@
 "                        zE eliminate all fold in the window 
 "                        zd delete one fold at the cursor
   nnoremap º za
-  nnoremap <F5> [{k<C-v>j%zf 
+  nnoremap <F5> <C-v>j%zf 
   nnoremap <F6> zR
   nnoremap <F7> zM
   nnoremap <F8> zE
@@ -87,7 +87,6 @@
   highlight Folded ctermfg=LightBlue ctermbg=Black guifg=LightBlue guibg=Black 
   set foldtext=getline(v:foldstart) "sirve para evitar que salgan el num. de lineas en el plegado
   set viewoptions=folds
-
 
 "*##################################################################################################*
 "*##                             PUNCTUATION SIGNS COMPLETE                                       ##*
