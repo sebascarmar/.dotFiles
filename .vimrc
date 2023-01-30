@@ -360,17 +360,18 @@ colorscheme PaperColor
   let g:airline#extensions#whitespace#enabled = 0
 
 " Themes for the status line 
-  "let g:airline_theme = 'luna'
-  "let g:airline_theme = 'molokai'
-  "let g:airline_theme = 'distinguished'
-  "let g:airline_theme = 'term'
-  "let g:airline_theme = 'powerlineish'
-  "let g:airline_theme = 'deus'
-  "let g:airline_theme = 'base16_spacemacs'
-  "let g:airline_theme='oceanicnext'
-  "let g:airline_theme = 'badwolf' va bien
-  let g:airline_theme = 'simple'
-
+  "let g:airline_theme = 'ayu_mirage'
+  "let g:airline_theme = 'ayu_dark'
+  "let g:airline_theme = 'base16_3024'
+  "let g:airline_theme = 'base16_ashes'
+  "let g:airline_theme = 'base16_bright'
+  "let g:airline_theme = 'base16_monokai'
+  "let g:airline_theme = 'fairyfloss' "es igual a jellybeans
+  "let g:airline_theme = 'google_dark'
+  "let g:airline_theme = 'hybrid'
+  let g:airline_theme = 'jellybeans'
+  "let g:airline_theme = 'night_owl'
+  "let g:airline_theme = 'moonfly'
 
 "*##################################################################################################*/
 "*##                                    INDENTLINE                                                ##*/
