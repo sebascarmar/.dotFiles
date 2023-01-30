@@ -170,6 +170,7 @@ nmap <Leader>s <Plug>(easymotion-s2)
  
 "Terminal
   set termwinsize=10x0
+  hi Terminal ctermbg=black
   map <F12> :belowright terminal<CR>
 "  "Inicio/Fin
 "    inoremap <C-e> <C-o>0
