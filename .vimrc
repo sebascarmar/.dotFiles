@@ -205,43 +205,42 @@ nmap <Leader>s <Plug>(easymotion-s2)
 call plug#begin('~/.vim/plugged')
 
   " Search files/paths
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
-    Plug 'scrooloose/nerdtree'
-    Plug 'christoomey/vim-tmux-navigator'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
+  Plug 'scrooloose/nerdtree'
+  Plug 'christoomey/vim-tmux-navigator'
 
   " When editing
-    Plug 'ervandew/supertab'
-    Plug 'easymotion/vim-easymotion'
-    Plug 'tpope/vim-surround'
-    Plug 'lervag/vimtex'
-    "Plug 'SirVer/ultisnips'   , {'for': ['tex', 'c', 'c++']} 
-    "Plug 'honza/vim-snippets' , {'for': ['tex', 'c', 'c++']}
-    Plug 'SirVer/ultisnips'   
-    Plug 'honza/vim-snippets' 
-    Plug  'ycm-core/YouCompleteMe' 
-    Plug 'Yggdroot/indentLine'
+  Plug 'ervandew/supertab'
+  Plug 'easymotion/vim-easymotion'
+  Plug 'tpope/vim-surround'
+  Plug 'lervag/vimtex'
+  "Plug 'SirVer/ultisnips'   , {'for': ['tex', 'c', 'c++']} 
+  "Plug 'honza/vim-snippets' , {'for': ['tex', 'c', 'c++']}
+  Plug 'SirVer/ultisnips'   
+  Plug 'honza/vim-snippets' 
+  "Plug  'ycm-core/YouCompleteMe' 
+  Plug 'Yggdroot/indentLine'
 
   " Syntax
-    Plug 'dense-analysis/ale', {'for': ['tex', 'c', 'cpp']} 
+  "Plug 'dense-analysis/ale', {'for': ['tex', 'c', 'cpp']} 
 
   " Themes
-    Plug 'morhetz/gruvbox' 
-    Plug 'shinchu/lightline-gruvbox.vim'
-    Plug 'chriskempson/base16-vim'
-    Plug 'glepnir/oceanic-material'
-    Plug 'mhartington/oceanic-next'
+  Plug 'shinchu/lightline-gruvbox.vim'
+  Plug 'chriskempson/base16-vim'
+  Plug 'NLKNguyen/papercolor-theme'
+  Plug 'bluz71/vim-moonfly-colors'
+  Plug 'dracula/vim', { 'as': 'dracula' }
 
   " Status line themes
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
 
   " Git integration
-    Plug 'airblade/vim-gitgutter'
-    Plug 'tpope/vim-fugitive'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'tpope/vim-fugitive'
 
 call plug#end()
-
 
 "*##################################################################################################*
 "*##                                            LATEX                                             ##*
