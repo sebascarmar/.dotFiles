@@ -168,6 +168,9 @@ nmap <Leader>s <Plug>(easymotion-s2)
   nnoremap <Leader>m I//<Esc>
   vnoremap <Leader>m I//<Esc>
  
+"Terminal
+  set termwinsize=10x0
+  map <F12> :belowright terminal<CR>
 "  "Inicio/Fin
 "    inoremap <C-e> <C-o>0
 "    inoremap <C-r> <C-o>$
