@@ -258,15 +258,13 @@ let g:vimtex_syntax_conceal_disable=1
 
 "let g:vimtex_view_reverse_search_edit_cmd = tabedit "default=edit
 
-
 " Key maps
-autocmd FileType tex nnoremap <Leader>g :!latexmk -pdf %<CR>
-autocmd FileType tex nnoremap <Leader>G :VimtexCompile <CR> 
- "Forward search
-autocmd FileType tex nnoremap <Leader>v :VimtexView <CR> 
-noremap <Leader><C-i>:!pdflatex %<CR><CR>
-noremap <Leader><C-s>:' mupdf-x11 $(echo % \| sed 's/tex$/pdf/') & disown<CR><CR>
-
+  autocmd FileType tex nnoremap <Leader>g :!latexmk -pdf %<CR>
+  autocmd FileType tex nnoremap <Leader>G :VimtexCompile <CR> 
+"Forward search
+  autocmd FileType tex nnoremap <Leader>v :VimtexView <CR> 
+  noremap <Leader><C-i>:!pdflatex %<CR><CR>
+  noremap <Leader><C-s>:' mupdf-x11 $(echo % \| sed 's/tex$/pdf/') & disown<CR><CR>
 
 "*##################################################################################################*/
 "*##                                        ALE                                                   ##*/
@@ -288,8 +286,9 @@ let g:ale_fixers = {'tex': ['alex', 'proselint', 'redpen', 'texlab', 'vale', 'cs
 "let g:ale_linters = {'tex': ['cspell', 'write-good', 'textlint',]}
 "let g:ale_linters = {'tex': ['chktex', 'lacheck']}
 
-nnoremap ]w :ALENextWrap<CR>
-nnoremap [w :ALEPreviousWrap<CR>
+" Permite avanzar o retroceder al warning más próximo
+  nnoremap ]w :ALENextWrap<CR>
+  nnoremap [w :ALEPreviousWrap<CR>
 
 "*##################################################################################################*/
 "*##                                      ULTISNIP                                                ##*/
@@ -385,14 +384,14 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
   nnoremap <C-p> :Files<Cr>
   nnoremap <c-f> :BLines<Cr>
   nnoremap <Leader>h :History/<Cr>
-  
-  " Insert mode completion
+" Insert mode completion
   imap <c-x><c-k> <plug>(fzf-complete-word)
   imap <c-x><c-d> <plug>(fzf-complete-path)
-  " Es lo mismo que :BLines pero en modo insertar
+" Es lo mismo que :BLines pero en modo insertar
   imap <c-x><c-f> <plug>(fzf-complete-line) 
   imap <c-x><c-p> <plug>(fzf-complete-file)
 
+" Ripgrep se ejcuta con :Rg
 
 "#####################################################################################################
 "###                                    GITGUTTER                                                 ####
