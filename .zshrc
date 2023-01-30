@@ -187,10 +187,14 @@ plugins=(
   git
   extract
   colored-man-pages
+  #sudo
+  web-search
   zsh-autosuggestions
   zsh-syntax-highlighting
   z
 )
+
+######################################################################################################
 
 source $ZSH/oh-my-zsh.sh
 
@@ -232,7 +236,6 @@ export MANPAGER="sh -c 'col -bx | bat --theme=TwoDark -l man -p' "
 ######################################################################################################
 ####                               FUZZY FINDER                                                   ####
 ######################################################################################################
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #### This is the configuration for fuzzy finder #### 
@@ -278,3 +281,5 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 #--color fg:242,bg:233,hl:65,fg+:15,bg+:234,hl+:108
 #--color info:108,prompt:109,spinner:108,pointer:168,marker:168
 #'
+
+
