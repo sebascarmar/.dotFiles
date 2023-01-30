@@ -112,7 +112,7 @@
 "*##################################################################################################*
 let mapleader=" "
 noremap <Leader>q :q<Enter>
-nnoremap <Leader>nt :NERDTreeFind<CR>
+nnoremap <Leader>nt :NERDTreeToggle<CR>
 nmap <Leader>s <Plug>(easymotion-s2)
   
 "Keymaps for tabs
