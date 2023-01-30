@@ -190,6 +190,7 @@ nmap <Leader>s <Plug>(easymotion-s2)
 "Ignore ZZ
   nnoremap Z <Nop>
   nnoremap ZZ <Nop>
+  nnoremap Q <Nop>
 "  "Unable arrow keys
 "    map <Up> <nop>
 "    map <Down> <nop>
