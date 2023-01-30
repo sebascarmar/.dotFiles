@@ -120,10 +120,6 @@ nmap <Leader>s <Plug>(easymotion-s2)
     nnoremap <C-t> :tabnew 
   "Acomoda las tabs en la posición deseada (empieza desde 0)
     nnoremap <Leader><C-t> :tabm
-  "Cierra todas las tabs menos la actual
-    nnoremap <F9> :tabo<CR>  
-  "Cierra pestaña actual. Revisar key map
-    nnoremap <F12> :tab ball<CR>
   "Navega entre las tabs abiertas
     nnoremap <Leader>1 :tabn 1<CR>
     nnoremap <Leader>2 :tabn 2<CR>
@@ -171,10 +167,7 @@ nmap <Leader>s <Plug>(easymotion-s2)
 "Comments for C/C++
   nnoremap <Leader>m I//<Esc>
   vnoremap <Leader>m I//<Esc>
-  
-"    "Suprimir
-"    inoremap <C-k> <Esc>lxi
-"    inoremap <C-l> <Esc>ldwi
+ 
 "  "Inicio/Fin
 "    inoremap <C-e> <C-o>0
 "    inoremap <C-r> <C-o>$
@@ -183,10 +176,6 @@ nmap <Leader>s <Plug>(easymotion-s2)
   noremap <F3> :e!<CR>
 "Desactivar temporalmente el resalto
   nnoremap <F2> :nohls<CR>
-"  "Super enter
-"    nnoremap <Leader><C-n> 4a<CR><Esc>2ki
-"    nnoremap <C-n> I<CR><Esc>
-"    inoremap <C-j> <Esc>d0O<Esc><C-m>Plli
 "Ignore ZZ
   nnoremap Z <Nop>
   nnoremap ZZ <Nop>
