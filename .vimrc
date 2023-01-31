@@ -5,9 +5,9 @@
 "      Sebastian Carreño Marin
 
 
-"*##################################################################################################*
-"*##                                   GENERAL SETTINGS                                           ##*
-"*##################################################################################################*
+"###########################################################################################"
+"##                             GENERAL SETTINGS                                          ##"
+"###########################################################################################"
   syntax on
   syntax enable
   "setlocal spell
@@ -17,17 +17,17 @@
   set splitright 
   set clipboard=unnamedplus "debí instalar >sudo apt install vim-gtk
 
-"*##################################################################################################*
-"*##                                      CURSOR                                                  ##*
-"*##################################################################################################*
+"###########################################################################################"
+"##                                 CURSOR                                                ##"
+"###########################################################################################"
   set cursorline
   set cursorcolumn
   highlight CursorLine  term=bold cterm=bold  ctermbg=black
   highlight CursorColumn term=bold cterm=bold ctermbg=black
 
-"*##################################################################################################*
-"*##                                  INDENT & TAB                                                ##*
-"*##################################################################################################*
+"###########################################################################################"
+"##                             INDENT & TAB                                              ##"
+"###########################################################################################"
   set tabstop=8 
   set shiftwidth=2
   set softtabstop=2
@@ -37,17 +37,17 @@
   set smarttab
   filetype indent on
 
-"*##################################################################################################*
-"*##                                      FOLDING                                                ##*
-"*##################################################################################################*
-" Configuration
+"###########################################################################################"
+"##                                FOLDING                                                ##"
+"###########################################################################################"
+"Configuration
   set foldmethod=manual 
   set foldnestmax=10
   "set foldenable
   set foldlevel=2                                         
   set foldlevelstart=0
 
-" Save folds on exit and load them on edit
+"Save folds on exit and load them on edit
   autocmd BufWinLeave *.py mkview
   autocmd BufWinEnter *.py silent loadview
   autocmd BufWinLeave *.h mkview
@@ -71,79 +71,132 @@
   autocmd TabLeave *.tex mkview
   "autocmd TabEnter *.tex silent loadview
 
-" Shortcuts for folding: za open/close a fold 
-"                        zf create a fold 
-"                        zR open all folds 
-"                        zM close all folds 
-"                        zE eliminate all fold in the window 
-"                        zd delete one fold at the cursor
+"Shortcuts for folding: za open/close a fold 
+"                       zf create a fold 
+"                       zR open all folds 
+"                       zM close all folds 
+"                       zE eliminate all fold in the window 
+"                       zd delete one fold at the cursor
   nnoremap º za
   nnoremap <F5> <C-v>j%zf 
   nnoremap <F6> zR
   nnoremap <F7> zM
   nnoremap <F8> zE
 
-" Folding color and text
+"Folding color and text
   highlight Folded ctermfg=LightBlue ctermbg=Black guifg=LightBlue guibg=Black 
   set foldtext=getline(v:foldstart) "sirve para evitar que salgan el num. de lineas en el plegado
   set viewoptions=folds
 
-"*##################################################################################################*
-"*##                             PUNCTUATION SIGNS COMPLETE                                       ##*
-"*##################################################################################################*
+"###########################################################################################"
+"##                      PUNCTUATION SIGNS COMPLETE                                       ##"
+"###########################################################################################"
 "  inoremap ( ()<Esc>i
 "  inoremap { {}<Esc>i
 "  inoremap {<CR> {<CR>}<Esc>O
 "  inoremap [ []<Esc>i
 "  inoremap ' ''<Esc>i
 "  inoremap " ""<Esc>i
-  
-"*##################################################################################################*
-"*##                                     TAGS                                                     ##*
-"*##################################################################################################*
-  iab _com /* */<Esc>2hi
-  iab _comf /* ACCION:<CR>PARAMETROS:<CR>RETORNO:<CR>/<Esc>3kA
-  iab _coms /****************************************************************************************************/<Esc>94hR
-  iab _comsm /*--------------------------------------------------------------------------------------------------*/
-  iab _comb /*##################################################################################################*/<CR>/*##################################################################################################*/<Esc>O/*##                                                                                              ##*/<Esc>75hR
 
-"*##################################################################################################*
-"*##                                          KEY MAPS                                            ##*
-"*##################################################################################################*
-let mapleader=" "
-noremap <Leader>q :q<Enter>
-nnoremap <Leader>nt :NERDTreeToggle<CR>
-nmap <Leader>s <Plug>(easymotion-s2)
-  
-"Keymaps for tabs
-  "Abre una nueva tab con el archivo que se le pase como argumento.
-    nnoremap <C-t> :tabnew 
-  "Acomoda las tabs en la posición deseada (empieza desde 0)
-    nnoremap <Leader><C-t> :tabm
-  "Navega entre las tabs abiertas
-    nnoremap <Leader>1 :tabn 1<CR>
-    nnoremap <Leader>2 :tabn 2<CR>
-    nnoremap <Leader>3 :tabn 3<CR>
-    nnoremap <Leader>4 :tabn 4<CR>
-    nnoremap <Leader>5 :tabn 5<CR>
-    nnoremap <Leader>6 :tabn 6<CR>
-    nnoremap <Leader>7 :tabn 7<CR>
-    nnoremap <Leader>8 :tabn 8<CR>
-    nnoremap <Leader>9 :tabn 9<CR>
-"Keymaps for buffers
-  "Lista los buffers actuales (b para la nativa, B para la de fzf).
-    nnoremap <Leader>º :Buffers<CR>
-  "Navega entre los buffers abiertos
-    nnoremap <Leader>! :b1<CR>
-    nnoremap <Leader>" :b2<CR>
-    nnoremap <Leader>· :b3<CR>
-    nnoremap <Leader>$ :b4<CR>
-    nnoremap <Leader>% :b5<CR>
-    nnoremap <Leader>& :b6<CR>
-    nnoremap <Leader>/ :b7<CR>
-    nnoremap <Leader>( :b8<CR>
-    nnoremap <Leader>) :b9<CR>
+"###########################################################################################"
+"##                                  TAGS                                                 ##"
+"###########################################################################################"
+  autocmd FileType vim iab _coms "*******************************************************************************************"<Esc>
 
+  autocmd FileType vim iab _comsm "-------------------------------------------------------------------------------------------"<Esc>70hR
+  autocmd FileType vim iab _comb "###########################################################################################"<CR>###########################################################################################"<Esc>O##<Esc>a <Esc>86.a##"<Esc>65hR
+
+
+  autocmd FileType sh,zsh iab _coms #*******************************************************************************************#<Esc>
+
+  autocmd FileType sh,zsh iab _comsm #-------------------------------------------------------------------------------------------#<Esc>70hR
+  autocmd FileType sh,zsh iab _comb #############################################################################################<CR>############################################################################################<Esc>O#<Esc>a <Esc>88.a##<Esc>65hR
+
+"###########################################################################################"
+"##                                LENGUAJE C                                             ##"
+"###########################################################################################"
+"Compiler
+  autocmd FileType c nnoremap <Leader>g :!clear && gcc -Wall % -o
+  autocmd FileType c nnoremap <Leader>G :!clear && gcc -Wall % && ./a.out
+  autocmd FileType c nnoremap <Leader>x :!clear && ./
+
+"Comments
+  autocmd FileType c nnoremap <Leader>m I//<Esc>
+  autocmd FileType c vnoremap <Leader>m I//<Esc>
+
+"Tags for comments
+  autocmd FileType c iab _com /* */<Esc>2hi
+  autocmd FileType c iab _comf /* ACCION:<CR>PARAMETROS:<CR>RETORNO:<CR>/<Esc>3kA
+  autocmd FileType c iab _coms /*******************************************************************************************/<Esc>
+
+  autocmd FileType c iab _comsm /*-----------------------------------------------------------------------------------------*/<Esc>70hR
+  autocmd FileType c iab _comb /*#########################################################################################*/<CR>/*#########################################################################################*/<Esc>O/*##                                                                                     ##*/<Esc>65hR
+
+"###########################################################################################"
+"##                                LENGUAJE C++                                           ##"
+"###########################################################################################"
+"Compiler
+  autocmd FileType cpp nnoremap <Leader>g :!clear && g++ -Wall % -o
+  autocmd FileType cpp nnoremap <Leader>G :!clear && g++ -Wall % && ./a.out
+  autocmd FileType cpp nnoremap <Leader>x :!clear && ./
+
+"Comments for C/C++
+  autocmd FileType cp nnoremap <Leader>m I//<Esc>
+  autocmd FileType cp vnoremap <Leader>m I//<Esc>
+
+"Tags for comments
+  autocmd FileType cpp iab _com /* */<Esc>2hi
+  autocmd FileType cpp iab _comf /* ACCION:<CR>PARAMETROS:<CR>RETORNO:<CR>/<Esc>3kA
+  autocmd FileType cpp iab _coms /*******************************************************************************************/<Esc>
+
+  autocmd FileType cpp iab _comsm /*-----------------------------------------------------------------------------------------*/<Esc>70hR
+  autocmd FileType cpp iab _comb /*#########################################################################################*/<CR>/*#########################################################################################*/<Esc>O/*##                                                                                     ##*/<Esc>65hR
+
+"###########################################################################################"
+"##                              MAP LEADER KEY                                           ##"
+"###########################################################################################"
+  let mapleader=" "
+  noremap <Leader>q :q<Enter>
+  nnoremap <Leader>nt :NERDTreeToggle<CR>
+  nmap <Leader>s <Plug>(easymotion-s2)
+  
+"###########################################################################################"
+"##                                      TABS                                             ##"
+"###########################################################################################"
+"Abre una nueva tab con el archivo que se le pase como argumento.
+  nnoremap <C-t> :tabnew 
+"Acomoda las tabs en la posición deseada (empieza desde 0)
+  nnoremap <Leader><C-t> :tabm
+"Navega entre las tabs abiertas
+  nnoremap <Leader>1 :tabn 1<CR>
+  nnoremap <Leader>2 :tabn 2<CR>
+  nnoremap <Leader>3 :tabn 3<CR>
+  nnoremap <Leader>4 :tabn 4<CR>
+  nnoremap <Leader>5 :tabn 5<CR>
+  nnoremap <Leader>6 :tabn 6<CR>
+  nnoremap <Leader>7 :tabn 7<CR>
+  nnoremap <Leader>8 :tabn 8<CR>
+  nnoremap <Leader>9 :tabn 9<CR>
+
+"###########################################################################################"
+"##                                     BUFFERS                                           ##"
+"###########################################################################################"
+"Lista los buffers actuales (b para la nativa, B para la de fzf).
+  nnoremap <Leader>º :Buffers<CR>
+"Navega entre los buffers abiertos
+  nnoremap <Leader>! :b1<CR>
+  nnoremap <Leader>" :b2<CR>
+  nnoremap <Leader>· :b3<CR>
+  nnoremap <Leader>$ :b4<CR>
+  nnoremap <Leader>% :b5<CR>
+  nnoremap <Leader>& :b6<CR>
+  nnoremap <Leader>/ :b7<CR>
+  nnoremap <Leader>( :b8<CR>
+  nnoremap <Leader>) :b9<CR>
+
+"###########################################################################################"
+"##                                  OTHER MAPPINGS                                       ##"
+"###########################################################################################"
 "Window resize 
   nnoremap + <C-w>+
   nnoremap - <C-w>-
@@ -156,22 +209,7 @@ nmap <Leader>s <Plug>(easymotion-s2)
 "Toggle spell on and off
   nnoremap <Leader>l :set spell!<CR>
 
-"C/C++ compiler 
-  autocmd FileType c nnoremap <Leader>g :!clear && gcc -Wall % -o
-  autocmd FileType c nnoremap <Leader>G :!clear && gcc -Wall % && ./a.out
-  autocmd FileType c nnoremap <Leader>x :!clear && ./
-  autocmd FileType cpp nnoremap <Leader>g :!clear && g++ -Wall % -o
-  autocmd FileType cpp nnoremap <Leader>G :!clear && g++ -Wall % && ./a.out
-  autocmd FileType cpp nnoremap <Leader>x :!clear && ./
-
-"Comments for C/C++
-  nnoremap <Leader>m I//<Esc>
-  vnoremap <Leader>m I//<Esc>
  
-"Terminal
-  set termwinsize=10x0
-  hi Terminal ctermbg=black
-  map <F12> :belowright terminal<CR>
 "  "Inicio/Fin
 "    inoremap <C-e> <C-o>0
 "    inoremap <C-r> <C-o>$
@@ -190,20 +228,20 @@ nmap <Leader>s <Plug>(easymotion-s2)
 "    map <Left> <nop>
 "    map <Right> <nop>
 
-"*##################################################################################################*
-"*##                                           PLUGINS                                            ##*
-"*##################################################################################################*
+"###########################################################################################"
+"##                                  PLUGINS                                              ##"
+"###########################################################################################"
 " Plug-in installation: after put the repository name, you need to reload the .vimrc file and then,
 "execute :PlugInstall  
 call plug#begin('~/.vim/plugged')
 
-  " Search files/paths
+"Search files/paths
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'scrooloose/nerdtree'
   Plug 'christoomey/vim-tmux-navigator'
 
-  " When editing
+"When editing
   Plug 'ervandew/supertab'
   Plug 'easymotion/vim-easymotion'
   Plug 'tpope/vim-surround'
@@ -213,29 +251,29 @@ call plug#begin('~/.vim/plugged')
   "Plug  'ycm-core/YouCompleteMe' 
   Plug 'Yggdroot/indentLine'
 
-  " Syntax
+"Syntax
   Plug 'dense-analysis/ale', {'for': ['tex', 'c', 'cpp']} 
 
-  " Themes
+"Themes
   Plug 'shinchu/lightline-gruvbox.vim'
   Plug 'chriskempson/base16-vim'
   Plug 'NLKNguyen/papercolor-theme'
   Plug 'bluz71/vim-moonfly-colors'
   Plug 'dracula/vim', { 'as': 'dracula' }
 
-  " Status line themes
+"Status line themes
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
 
-  " Git integration
+"Git integration
   Plug 'airblade/vim-gitgutter'
   Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
-"*##################################################################################################*
-"*##                                            LATEX                                             ##*
-"*##################################################################################################*
+"###########################################################################################"
+"##                                    LATEX                                              ##"
+"###########################################################################################"
 let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'
 let g:vimtex_view_general_options = '-reuse-instance -forward-search @tex @line @pdf'
@@ -249,7 +287,7 @@ let g:vimtex_syntax_conceal_disable=1
 
 "let g:vimtex_view_reverse_search_edit_cmd = tabedit "default=edit
 
-" Key maps
+"Key maps
   autocmd FileType tex nnoremap <Leader>g :!latexmk -pdf %<CR>
   autocmd FileType tex nnoremap <Leader>G :VimtexCompile <CR> 
 "Forward search
@@ -257,9 +295,9 @@ let g:vimtex_syntax_conceal_disable=1
   noremap <Leader><C-i>:!pdflatex %<CR><CR>
   noremap <Leader><C-s>:' mupdf-x11 $(echo % \| sed 's/tex$/pdf/') & disown<CR><CR>
 
-"*##################################################################################################*/
-"*##                                        ALE                                                   ##*/
-"*##################################################################################################*/
+"###########################################################################################"
+"##                                     ALE                                               ##"
+"###########################################################################################"
 let g:ale_sign_error = '>>'
 let g:ale_sign_warning = '->'
 let g:ale_echo_msg_error_str = 'E'
@@ -271,34 +309,33 @@ let g:ale_list_window_size = 2
 "let g:ale_open_list = 1
 "let g:ale_keep_list_window_open = 1
 
-" Set this. Airline will handle the rest.
-let g:airline#extensions#ale#enabled = 1
-let g:ale_fixers = {'tex': ['alex', 'proselint', 'redpen', 'texlab', 'vale', 'cspell', 'write-good', 'textlint']}
-"let g:ale_linters = {'tex': ['cspell', 'write-good', 'textlint',]}
-"let g:ale_linters = {'tex': ['chktex', 'lacheck']}
+"Set this. Airline will handle the rest.
+  let g:airline#extensions#ale#enabled = 1
+  let g:ale_fixers = {'tex': ['alex', 'proselint', 'redpen', 'texlab', 'vale', 'cspell', 'write-good', 'textlint']}
+  "let g:ale_linters = {'tex': ['cspell', 'write-good', 'textlint',]}
+  "let g:ale_linters = {'tex': ['chktex', 'lacheck']}
 
-" Permite avanzar o retroceder al warning más próximo
+"Go to the next or previous warning.
   nnoremap ]w :ALENextWrap<CR>
   nnoremap [w :ALEPreviousWrap<CR>
 
-"*##################################################################################################*/
-"*##                                      ULTISNIP                                                ##*/
-"*##################################################################################################*/
+"###########################################################################################"
+"##                                  ULTISNIP                                             ##"
+"###########################################################################################"
 "En resumen: <C-j> y <C-k> para bajar y subir en la lista 
-let g:SuperTabDefaultCompletionType    = '<C-n>'
-let g:SuperTabCrMapping                = 0
-let g:UltiSnipsExpandTrigger           = '<tab>'
-let g:UltiSnipsJumpForwardTrigger      = '<tab>'
-let g:UltiSnipsJumpBackwardTrigger     = '<s-tab>'
-let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
-let g:UltiSnipsListSnippets="<c-l>"
+  let g:SuperTabDefaultCompletionType    = '<C-n>'
+  let g:SuperTabCrMapping                = 0
+  let g:UltiSnipsExpandTrigger           = '<tab>'
+  let g:UltiSnipsJumpForwardTrigger      = '<tab>'
+  let g:UltiSnipsJumpBackwardTrigger     = '<s-tab>'
+  let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
+  let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
+  let g:UltiSnipsListSnippets="<c-l>"
+  let g:UltiSnipsEditSplit="vertical"
 
-let g:UltiSnipsEditSplit="vertical"
-
-"*##################################################################################################*/
-"*##                                      THEMES                                                  ##*/
-"*##################################################################################################*/
+"###########################################################################################"
+"##                                     THEMES                                            ##"
+"###########################################################################################"
 set background=dark
 set t_Co=256
 
@@ -340,17 +377,17 @@ colorscheme PaperColor
 
 "colorscheme dracula
 
-"*##################################################################################################*/
-"*##                                      VIM-AIRLINE                                             ##*/
-"*##################################################################################################*/
-" Settings
+"###########################################################################################"
+"##                                  VIM-AIRLINE                                          ##"
+"###########################################################################################"
+"Settings
   let g:airline#extensions#tabline#enabled = 1
   let g:airline_powerline_fonts = 1
   let g:airline#extensions#tabline#formatter = 'unique_tail'
   let g:airline#extensions#fugitiveline#enabled = 1
   let g:airline#extensions#whitespace#enabled = 0
 
-" Themes for the status line 
+"Themes for the status line 
   "let g:airline_theme = 'ayu_mirage'
   "let g:airline_theme = 'ayu_dark'
   "let g:airline_theme = 'base16_3024'
@@ -364,39 +401,39 @@ colorscheme PaperColor
   "let g:airline_theme = 'night_owl'
   "let g:airline_theme = 'moonfly'
 
-"*##################################################################################################*/
-"*##                                    INDENTLINE                                                ##*/
-"*##################################################################################################*/
+"###########################################################################################"
+"##                                 INDENTLINE                                            ##"
+"###########################################################################################"
 let g:indentLine_char_list = ['┊','┊' ]  "'¦', '┆', '']
 
-"#####################################################################################################
-"###                               FUZZY FINDER - VIM                                             ####
-"#####################################################################################################
+"###########################################################################################"
+"##                               FUZZY FINDER (vim)                                      ##"
+"###########################################################################################"
 let g:fzf_layout = { 'down': '30%' }
 
-" Enable per-command history
+"Enable per-command history
 " - History files will be stored in the specified directory
 " - When set, CTRL-N and CTRL-P will be bound to 'next-history' and
 "   'previous-history' instead of 'down' and 'up'.
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
+"Key maps
+  "Normal mode
+    nnoremap <C-p> :Files<Cr>
+    nnoremap <c-f> :BLines<Cr>
+    nnoremap <Leader>h :History/<Cr>
+  "Insert mode completion
+    imap <c-x><c-k> <plug>(fzf-complete-word)
+    imap <c-x><c-d> <plug>(fzf-complete-path)
+  "Es lo mismo que :BLines pero en modo insertar
+    imap <c-x><c-f> <plug>(fzf-complete-line) 
+    imap <c-x><c-p> <plug>(fzf-complete-file)
 
-" Key maps
-  nnoremap <C-p> :Files<Cr>
-  nnoremap <c-f> :BLines<Cr>
-  nnoremap <Leader>h :History/<Cr>
-" Insert mode completion
-  imap <c-x><c-k> <plug>(fzf-complete-word)
-  imap <c-x><c-d> <plug>(fzf-complete-path)
-" Es lo mismo que :BLines pero en modo insertar
-  imap <c-x><c-f> <plug>(fzf-complete-line) 
-  imap <c-x><c-p> <plug>(fzf-complete-file)
+"Ripgrep se ejcuta con :Rg
 
-" Ripgrep se ejcuta con :Rg
-
-"#####################################################################################################
-"###                                    GITGUTTER                                                 ####
-"#####################################################################################################
+"###########################################################################################"
+"##                              GITGUTTER                                                ##"
+"###########################################################################################"
 set updatetime=100
 let g:gitgutter_enabled = 1
 let g:gitgutter_map_keys = 0
