@@ -204,6 +204,18 @@
   nnoremap <Leader>( :b8<CR>
   nnoremap <Leader>) :b9<CR>
 
+"Abre ventana dividida en vertical
+" :vs nombreDeArchivo
+"Abre ventana dividida en horizontal
+" :sp nombreDeArchivo
+
+"Abre archivos en tabs
+" >vim -p file1 file2
+"Abre archivos en ventana dividida horizontalmente
+" >vim -O file1 file2
+"Abre archivos en dif mode
+" >vim -d file1 file2
+
 "###########################################################################################"
 "##                                  OTHER MAPPINGS                                       ##"
 "###########################################################################################"
