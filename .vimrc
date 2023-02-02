@@ -114,7 +114,7 @@
 "##                                  VIM SCRIPTS                                          ##"
 "###########################################################################################"
 "Comments
-  autocmd FileType vim nnoremap <Leader>m 0I"<Esc>
+  autocmd FileType vim nnoremap <Leader>m I"<Esc>
   autocmd FileType vim vnoremap <Leader>m 0I"<Esc>
 
 "Tags
@@ -126,7 +126,7 @@
 "##                                  SHELL SCRIPTS                                        ##"
 "###########################################################################################"
 "Comments
-  autocmd FileType sh,zsh nnoremap <Leader>m 0I#<Esc>
+  autocmd FileType sh,zsh nnoremap <Leader>m I#<Esc>
   autocmd FileType sh,zsh vnoremap <Leader>m 0I#<Esc>
 
 "Tags
@@ -144,7 +144,7 @@
 
 "Comments
   autocmd FileType c nnoremap <Leader>m I//<Esc>
-  autocmd FileType c vnoremap <Leader>m I//<Esc>
+  autocmd FileType c vnoremap <Leader>m 0I//<Esc>
 
 "Tags for comments
   autocmd FileType c iab _com /* */<Esc>2hi
@@ -164,7 +164,7 @@
 
 "Comments for C/C++
   autocmd FileType cp nnoremap <Leader>m I//<Esc>
-  autocmd FileType cp vnoremap <Leader>m I//<Esc>
+  autocmd FileType cp vnoremap <Leader>m 0I//<Esc>
 
 "Tags for comments
   autocmd FileType cpp iab _com /* */<Esc>2hi
