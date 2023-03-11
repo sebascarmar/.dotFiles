@@ -282,4 +282,11 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 #--color info:108,prompt:109,spinner:108,pointer:168,marker:168
 #'
 
+#############################################################################################
+##                                      XILINX 14.7                                        ##
+#############################################################################################
+#source /opt/Xilinx/14.7/ISE_DS/settings64.sh
+#alias ise='/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/ise'
+export PATH=$PATH:/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64:/opt/Xilinx/14.7/ISE_DS/ISE/sysgen/util:/opt/Xilinx/14.7/ISE_DS/ISE/../../../DocNav:/opt/Xilinx/14.7/ISE_DS/PlanAhead/bin:/opt/Xilinx/14.7/ISE_DS/EDK/bin/lin64:/opt/Xilinx/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin:/opt/Xilinx/14.7/ISE_DS/EDK/gnu/powerpc-eabi/lin/bin:/opt/Xilinx/14.7/ISE_DS/EDK/gnu/arm/lin/bin:/opt/Xilinx/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_be/bin:/opt/Xilinx/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_le/bin:/opt/Xilinx/14.7/ISE_DS/common/bin/lin64
+
 
