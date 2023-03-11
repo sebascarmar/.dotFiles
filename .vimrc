@@ -476,7 +476,7 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
     imap <c-x><c-f> <plug>(fzf-complete-line) 
     imap <c-x><c-p> <plug>(fzf-complete-file)
 
-"Ripgrep se ejcuta con :Rg
+"Ripgrep se ejecuta con :Rg
 
 "###########################################################################################"
 "##                              GITGUTTER                                                ##"
