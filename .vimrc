@@ -286,6 +286,7 @@ call plug#begin('~/.vim/plugged')
 
 "Syntax
   Plug 'dense-analysis/ale', {'for': ['tex', 'c', 'cpp']} 
+  Plug 'frazrepo/vim-rainbow'
 
 "Themes
   Plug 'shinchu/lightline-gruvbox.vim'
@@ -479,3 +480,14 @@ set updatetime=100
 let g:gitgutter_enabled = 1
 let g:gitgutter_map_keys = 0
 let g:gitgutter_sign_allow_clobber = 1
+
+"###########################################################################################"
+"##                                    RAINBOW                                            ##"
+"###########################################################################################"
+let g:rainbow_active = 1	
+
+"Colores
+  let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'Darkyellow']
+  let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'magenta', 'yellow', 'red']
+
+
