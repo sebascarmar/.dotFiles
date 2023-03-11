@@ -293,6 +293,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'NLKNguyen/papercolor-theme'
   Plug 'bluz71/vim-moonfly-colors'
   Plug 'dracula/vim', { 'as': 'dracula' }
+  Plug 'ghifarit53/tokyonight-vim'
 
 "Status line themes
   Plug 'vim-airline/vim-airline'
@@ -387,7 +388,7 @@ set t_Co=256
 "set termguicolors
 
 
-colorscheme PaperColor
+"colorscheme PaperColor
 
 
 ""Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
@@ -409,6 +410,12 @@ colorscheme PaperColor
 
 
 "colorscheme dracula
+
+
+set termguicolors
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
+colorscheme tokyonight
 
 "###########################################################################################"
 "##                                  VIM-AIRLINE                                          ##"
