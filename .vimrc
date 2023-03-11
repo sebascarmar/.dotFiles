@@ -279,13 +279,13 @@ call plug#begin('~/.vim/plugged')
   Plug 'easymotion/vim-easymotion'
   Plug 'tpope/vim-surround'
   Plug 'lervag/vimtex'
-  Plug 'SirVer/ultisnips'   , {'for': ['tex', 'c', 'c++']} 
-  Plug 'honza/vim-snippets' , {'for': ['tex', 'c', 'c++']}
+  Plug 'SirVer/ultisnips'   , {'for': ['tex', 'c', 'c++', 'python', 'verilog']}
+  Plug 'honza/vim-snippets' , {'for': ['tex', 'c', 'c++', 'python', 'verilog']}
   "Plug  'ycm-core/YouCompleteMe' 
   Plug 'Yggdroot/indentLine'
 
 "Syntax
-  Plug 'dense-analysis/ale', {'for': ['tex', 'c', 'cpp']} 
+  Plug 'dense-analysis/ale', {'for': ['tex', 'c', 'cpp', 'python', 'verilog']}
   Plug 'frazrepo/vim-rainbow'
 
 "Themes
