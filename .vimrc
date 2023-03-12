@@ -281,7 +281,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'lervag/vimtex'
   Plug 'SirVer/ultisnips'   , {'for': ['tex', 'c', 'c++', 'python', 'verilog']}
   Plug 'honza/vim-snippets' , {'for': ['tex', 'c', 'c++', 'python', 'verilog']}
-  "Plug  'ycm-core/YouCompleteMe' 
+  Plug  'ycm-core/YouCompleteMe' 
   Plug 'Yggdroot/indentLine'
 
 "Syntax
