@@ -436,7 +436,7 @@ colorscheme tokyonight
 "Themes for the status line 
   "let g:airline_theme = 'ayu_mirage'
   "let g:airline_theme = 'ayu_dark'
-  let g:airline_theme = 'base16_3024'
+  "let g:airline_theme = 'base16_3024'
   "let g:airline_theme = 'base16_ashes'
   "let g:airline_theme = 'base16_bright'
   "let g:airline_theme = 'base16_monokai'
