@@ -348,12 +348,12 @@ let g:ale_list_window_size = 2
   let g:airline#extensions#ale#enabled = 1
   let g:ale_fixers = {'tex': ['alex', 'proselint', 'redpen', 'texlab', 'vale', 'cspell', 'write-good', 'textlint']}
 
-  let g:ale_linters = {'v': ['verilator']}
+  let g:ale_linters = {'v': ['verilator']} "Este lintern fue instalado como paquete por la shell.
   
   let g:ale_linters = {'c': ['gcc']}
   let g:ale_linters = {'cpp': ['gcc']}
 
-  let g:ale_linters = {'python' : ['mypy']} "flake8
+  let g:ale_linters = {'python' : ['mypy']} "Este lintern fue instalado por consola mediante pip.
 
 "Go to the next or previous warning.
   nnoremap ]w :ALENextWrap<CR>
