@@ -285,7 +285,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'Yggdroot/indentLine'
 
 "Syntax
-  Plug 'dense-analysis/ale', {'for': ['tex', 'c', 'cpp', 'python', 'verilog']}
+  Plug 'dense-analysis/ale', {'for': ['tex', 'c', 'cpp', 'python', 'verilog', 'systemverilog']}
   Plug 'frazrepo/vim-rainbow'
 
 "Themes
