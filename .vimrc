@@ -138,21 +138,21 @@
 "##                                LENGUAJE C                                             ##"
 "###########################################################################################"
 "Compiler
-  autocmd FileType c nnoremap <Leader>g :!clear && gcc -Wall % -o
-  autocmd FileType c nnoremap <Leader>G :!clear && gcc -Wall % && ./a.out
-  autocmd FileType c nnoremap <Leader>x :!clear && ./
+  autocmd FileType c,verilog nnoremap <Leader>g :!clear && gcc -Wall % -o
+  autocmd FileType c,verilog nnoremap <Leader>G :!clear && gcc -Wall % && ./a.out
+  autocmd FileType c,verilog nnoremap <Leader>x :!clear && ./
 
 "Comments
-  autocmd FileType c nnoremap <Leader>m I//<Esc>
-  autocmd FileType c vnoremap <Leader>m 0I//<Esc>
+  autocmd FileType c,verilog nnoremap <Leader>m I//<Esc>
+  autocmd FileType c,verilog vnoremap <Leader>m 0I//<Esc>
 
 "Tags for comments
-  autocmd FileType c iab _com /* */<Esc>2hi
-  autocmd FileType c iab _comf /* ACCION:<CR>PARAMETROS:<CR>RETORNO:<CR>/<Esc>3kA
-  autocmd FileType c iab _coms /*******************************************************************************************/<Esc>
+  autocmd FileType c,verilog iab _com /* */<Esc>2hi
+  autocmd FileType c,verilog iab _comf /* ACCION:<CR>PARAMETROS:<CR>RETORNO:<CR>/<Esc>3kA
+  autocmd FileType c,verilog iab _coms /*******************************************************************************************/<Esc>
 
-  autocmd FileType c iab _comsm /*-----------------------------------------------------------------------------------------*/<Esc>70hR
-  autocmd FileType c iab _comb /*#########################################################################################*/<CR>/*#########################################################################################*/<Esc>O/*##                                                                                     ##*/<Esc>65hR
+  autocmd FileType c,verilog iab _comsm /*-----------------------------------------------------------------------------------------*/<Esc>70hR
+  autocmd FileType c,verilog iab _comb /*#########################################################################################*/<CR>/*#########################################################################################*/<Esc>O/*##                                                                                     ##*/<Esc>65hR
 
 "###########################################################################################"
 "##                                LENGUAJE C++                                           ##"
